@@ -88,3 +88,63 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* Font faces */
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --clr-green: hsl(150, 100%, 63%);
+  --clr-purple-900: hsl(273, 85%, 13%);
+  --clr-purple-500: hsl(271, 12%, 34%);
+  --clr-purple-100: hsl(276, 100%, 99%);
+
+  --ff-heading: "Fraunces", serif;
+  --ff-body: "Manrope", sans-serif;
+
+  --fs-100: 1rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.25rem;
+  /* --fs-400: 1.75rem; */
+  --fs-500: 2rem;
+  --fs-600: 3rem;
+  --fs-700: 3.5rem;
+  /* --fs-800: 3.75rem; */
+  --fs-900: 5rem;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: clamp(var(--fs-100), 0.93rem + 0.305vw, var(--fs-200));
+}
+
+h1,
+h2 {
+  font-family: var(--ff-heading);
+}
+
+h1 {
+  font-size: clamp(var(--fs-600), 1.878rem + 4.878vw, var(--fs-900));
+}
+
+h2 {
+  &[data-title="small"] {
+    font-size: clamp(var(--fs-300), 0.829rem + 1.829vw, var(--fs-500));
+  }
+
+  &[data-title="large"] {
+    font-size: clamp(var(--fs-500), 1.159rem + 3.659vw, var(--fs-700));
+  }
+}
