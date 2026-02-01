@@ -138,7 +138,12 @@ textarea:not([rows]) {
   --spacing-700: 3.5rem;
   --spacing-800: 4rem;
   --spacing-1000: 5rem;
+  --spacing-1100: 5.5rem;
   --spacing-1400: 7rem;
+  --spacing-1600: 8rem;
+  --spacing-1800: 9rem;
+  --spacing-2100: 10.5rem;
+  --spacing-3700: 18.5rem;
 }
 
 /* base */
@@ -190,30 +195,6 @@ h2 {
   }
 }
 
-/* components */
-
-header {
-  padding-block-start: clamp(
-    var(--spacing-400),
-    1.159rem + 3.659vw,
-    var(--spacing-700)
-  );
-  padding-block-end: var(--spacing-700);
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-section.hero {
-  text-align: center;
-
-  h1 {
-    margin-block-end: var(--spacing-500);
-  }
-}
-
 section {
   @media (width < 768px) {
     &[data-text-center="mobile"],
@@ -227,6 +208,67 @@ section {
       text-align: center;
     }
   }
+}
+
+/* components */
+
+header {
+  padding-block-start: clamp(
+    var(--spacing-400),
+    1.159rem + 3.659vw,
+    var(--spacing-700)
+  );
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  text-align: center;
+  padding-block-start: var(--spacing-700);
+  padding-block-end: clamp(
+    var(--spacing-1800),
+    8.159rem + 3.659vw,
+    var(--spacing-2100)
+  );
+
+  h1 {
+    margin-block-end: var(--spacing-500);
+  }
+}
+
+.hero-image {
+  margin-block-start: calc(
+    -1 * clamp(var(--spacing-1100), 3.2rem + 10vw, var(--spacing-1600))
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr-purple-100);
+    z-index: -1;
+  }
+}
+
+.features-list {
+  padding-block-start: clamp(
+    var(--spacing-800),
+    3.159rem + 3.659vw,
+    var(--spacing-1100)
+  );
+  padding-block-end: clamp(
+    var(--spacing-800),
+    1.195rem + 12.195vw,
+    var(--spacing-1800)
+  );
+}
+
+.about {
+  padding-block-start: var(--spacing-1400);
 }
 
 .callout {
@@ -280,3 +322,30 @@ header a {
 .bg-light {
   background-color: var(--clr-purple-100);
 }
+
+/* [data-bottom-curved="hero"] {
+  anchor-name: --hero;
+
+  &::after {
+    position-anchor: --hero;
+  }
+}
+
+[data-bottom-curved="features"] {
+  anchor-name: --features;
+
+  &::after {
+    position-anchor: --features;
+  }
+}
+
+[data-bottom-curved]::after {
+  content: "";
+  position: absolute;
+  position-area: bottom center;
+  background-color: inherit;
+  width: 100%;
+  height: 48px;
+  border-radius: 100%;
+  top: calc(anchor(bottom) - 24px);
+} */
