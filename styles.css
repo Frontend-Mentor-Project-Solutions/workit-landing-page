@@ -23,13 +23,15 @@ figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
@@ -110,6 +112,7 @@ textarea:not([rows]) {
   --clr-purple-900: hsl(273, 85%, 13%);
   --clr-purple-500: hsl(271, 12%, 34%);
   --clr-purple-100: hsl(276, 100%, 99%);
+  --clr-white: hsl(0, 0%, 100%);
 
   --ff-heading: "Fraunces", serif;
   --ff-body: "Manrope", sans-serif;
@@ -123,11 +126,27 @@ textarea:not([rows]) {
   --fs-700: 3.5rem;
   /* --fs-800: 3.75rem; */
   --fs-900: 5rem;
+
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-250: 1.25rem;
+  --spacing-350: 1.75rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-550: 2.75rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
+  --spacing-1400: 7rem;
 }
+
+/* base */
 
 body {
   font-family: var(--ff-body);
   font-size: clamp(var(--fs-100), 0.93rem + 0.305vw, var(--fs-200));
+  color: var(--clr-purple-900);
 }
 
 h1,
@@ -147,4 +166,44 @@ h2 {
   &[data-title="large"] {
     font-size: clamp(var(--fs-500), 1.159rem + 3.659vw, var(--fs-700));
   }
+}
+
+/* layout */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: clamp(
+    var(--spacing-400),
+    1.159rem + 3.659vw,
+    var(--spacing-700)
+  );
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: var(--spacing-700);
+  padding-block: clamp(
+    var(--spacing-1000),
+    3.878rem + 4.878vw,
+    var(--spacing-1400)
+  );
+}
+
+ul {
+  display: flex;
+  gap: var(--spacing-350);
+}
+
+/* utilities */
+
+.bg-dark {
+  background-color: var(--clr-purple-900);
+  color: var(--clr-white);
+}
+
+.bg-light {
+  background-color: var(--clr-purple-100);
 }
