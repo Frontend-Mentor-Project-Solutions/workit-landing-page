@@ -17,73 +17,83 @@
   </head>
   <body>
     <header class="bg-dark">
-      <img src="./assets/images/logo-light.svg" alt="workit logo" />
-      <a href="#">Apply for access</a>
+      <div class="wrapper">
+        <div class="header-inner">
+          <img src="./assets/images/logo-light.svg" alt="workit logo" />
+          <a href="#">Apply for access</a>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero bg-dark">
-        <h1>Data tailored to your needs.</h1>
+        <div class="wrapper" data-width="narrow">
+          <h1>Data <span class="underline">tailored</span> to your needs.</h1>
 
-        <a href="#" class="button-link">Learn more</a>
+          <a href="#" class="button-link">Learn more</a>
 
-        <img
-          src="./assets/images/image-hero.webp"
-          alt="smartphone displaying a line graph"
-        />
-      </section>
-
-      <section class="features-list bg-light">
-        <div class="feature">
-          <span>1</span>
-
-          <h2 data-title="small">Actionable insights</h2>
-          <p>
-            Optimize your products, improve customer satisfaction and stay ahead
-            of the competition with our product data analytics.
-          </p>
-        </div>
-
-        <div class="feature">
-          <span>2</span>
-
-          <h2 data-title="small">Data-driven decisions</h2>
-          <p>
-            Make data-driven decisions with our product data analytics. Our
-            AI-generated reports help you unlock insights hidden in your product
-            data.
-          </p>
-        </div>
-
-        <div class="feature">
-          <span>3</span>
-
-          <h2 data-title="small">Always affordable</h2>
-          <p>
-            Always affordable pricing that scales with your business. Get
-            top-quality product data analytics services without hidden costs or
-            unexpected fees.
-          </p>
+          <img
+            src="./assets/images/image-hero.webp"
+            alt="smartphone displaying a line graph"
+          />
         </div>
       </section>
 
-      <section class="about">
-        <img
-          src="./assets/images/image-founder.webp"
-          alt="smiling man with glasses"
-        />
+      <section class="features-list bg-light" data-text-center="mobile-desktop">
+        <div class="wrapper">
+          <div class="feature">
+            <span>1</span>
 
-        <div class="about-text bg-dark">
-          <h2 data-title="large">Be the first to test</h2>
+            <h2 data-title="small">Actionable insights</h2>
+            <p>
+              Optimize your products, improve customer satisfaction and stay
+              ahead of the competition with our product data analytics.
+            </p>
+          </div>
 
-          <p>
-            Hi, I'm Louis Graham, the founder of the company. Book a demo call
-            with me to become a beta tester for our app and kickstart your
-            company. Apply for access below and I’ll be in touch to schedule a
-            call.
-          </p>
+          <div class="feature">
+            <span>2</span>
 
-          <a href="#" class="button-link">Apply for access</a>
+            <h2 data-title="small">Data-driven decisions</h2>
+            <p>
+              Make data-driven decisions with our product data analytics. Our
+              AI-generated reports help you unlock insights hidden in your
+              product data.
+            </p>
+          </div>
+
+          <div class="feature">
+            <span>3</span>
+
+            <h2 data-title="small">Always affordable</h2>
+            <p>
+              Always affordable pricing that scales with your business. Get
+              top-quality product data analytics services without hidden costs
+              or unexpected fees.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" data-text-center="mobile">
+        <div class="wrapper">
+          <img
+            src="./assets/images/image-founder.webp"
+            alt="smiling man with glasses"
+          />
+
+          <div class="callout bg-dark flow">
+            <h2 data-title="large">Be the first to test</h2>
+
+            <p>
+              Hi, I'm Louis Graham, the founder of the company. Book a demo call
+              with me to become a beta tester for our app and kickstart your
+              company. Apply for access below and I’ll be in touch to schedule a
+              call.
+            </p>
+
+            <a href="#" class="button-link">Apply for access</a>
+          </div>
         </div>
       </section>
     </main>
