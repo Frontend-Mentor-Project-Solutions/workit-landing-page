@@ -273,6 +273,16 @@ header {
 
 .callout {
   padding: clamp(var(--spacing-400), 0.878rem + 4.878vw, var(--spacing-800));
+  max-width: clamp(31.5rem, 15.5rem + 33.333vw, 45.5rem);
+  margin-inline-start: auto;
+}
+
+.about img {
+  width: clamp(17.5rem, 3.786rem + 28.571vw, 29.5rem);
+  position: relative;
+  display: inline-block;
+  z-index: -1;
+  margin-block-end: calc(-1 * var(--spacing-1000));
 }
 
 footer {
