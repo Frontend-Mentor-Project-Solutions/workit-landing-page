@@ -246,6 +246,7 @@ header {
     1.159rem + 3.659vw,
     var(--spacing-700)
   );
+  padding-block-end: var(--spacing-100);
 }
 
 .header-inner {
@@ -350,12 +351,51 @@ ul {
   color: var(--clr-purple-900);
   background-color: var(--clr-green);
   padding: var(--spacing-150) var(--spacing-400);
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: var(--clr-purple-900);
+    color: var(--clr-green);
+    border-color: inherit;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-purple-900);
+    outline-offset: -4px;
+  }
 }
 
 .button-link,
 a {
   font-weight: 700;
   font-size: var(--fs-200);
+  transition: all 0.3s ease-in;
+
+  &:focus-visible {
+    transition: none;
+  }
+}
+
+a {
+  &:hover {
+    color: var(--clr-green);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-green);
+  }
+}
+
+.socials svg {
+  color: var(--clr-purple-500);
+
+  &:hover {
+    color: var(--clr-purple-900);
+  }
 }
 
 .underline,
