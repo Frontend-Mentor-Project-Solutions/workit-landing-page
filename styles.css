@@ -419,6 +419,57 @@ header a {
   }
 }
 
+h1 {
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  &:before {
+    background-image: url("./assets/images/bg-pattern-1.svg");
+    width: clamp(12.5rem, -6.25rem + 39.063vw, 18.75rem);
+    height: clamp(12.5rem, -6.25rem + 39.063vw, 18.75rem);
+    left: calc(-1 * var(--spacing-1400));
+  }
+
+  &:after {
+    background-image: url("./assets/images/bg-pattern-2.svg");
+    right: calc(-1 * var(--spacing-400));
+    width: clamp(6.25rem, -12.5rem + 39.063vw, 12.5rem);
+    height: clamp(6.25rem, -12.5rem + 39.063vw, 12.5rem);
+  }
+}
+
+.callout {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url("./assets/images/bg-pattern-3.svg");
+    width: clamp(12.5rem, -6.25rem + 39.063vw, 18.75rem);
+    height: clamp(12.5rem, -6.25rem + 39.063vw, 18.75rem);
+    right: 0;
+    bottom: calc(-1 * var(--spacing-1800));
+  }
+}
+
+h1::before,
+h1::after,
+.callout::after {
+  @media (width < 768px) {
+    display: none;
+  }
+}
+
 /* utilities */
 
 .bg-dark {
