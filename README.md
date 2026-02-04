@@ -63,3 +63,4 @@ Some improvements that could be made:
 
 - [Switcher layout](https://every-layout.dev/layouts/switcher/) - great book btw!
 - [Content Grid Wrapper](https://youtu.be/c13gpBrnGEw?si=BNg4gFtVUhu2t7vg) - will need this for the refactoring
+- [Fluid typography generator](https://fluid.style/type?min=2.25&max=4.5&min-bp=20&max-bp=77.5&unit=%22rem%22)
